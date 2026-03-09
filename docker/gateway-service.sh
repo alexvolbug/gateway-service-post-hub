@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
-echo "Start service script"
-exec java -jar gateway-service-1.0-SNAPSHOT.jar
+PROFILE=${PROFILE:-prod}
+
+echo "Starting service with profile: $PROFILE"
+exec java -jar /srv/gateway-service-1.0-SNAPSHOT.jar --spring.profiles.active=$PROFILE
