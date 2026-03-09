@@ -1,4 +1,4 @@
-FROM openjdk:21
+FROM eclipse-temurin:21-jdk
 
 COPY target/*.jar /srv
 COPY docker/gateway-service.sh /srv
